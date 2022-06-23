@@ -10,7 +10,7 @@ if len(chosen_word) != 5:
 else:
     single_letter: str = input("Enter a single character: ")
     if len(single_letter) != 1:
-        print("Character must be a single character.")
+        print("Error: Character must be a single character.")
         exit()
     else:
         letter_amount: int = 0
