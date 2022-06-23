@@ -1,6 +1,8 @@
 """Input, Variables, and Conditionals Practice."""
 
-_author_ = "730460892"
+
+__author__ = "730460892"
+
 
 chosen_word: str = input("Enter a 5-character word: ")
 if len(chosen_word) != 5:
