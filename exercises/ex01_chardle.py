@@ -31,7 +31,8 @@ else:
             letter_amount = letter_amount + 1
         if letter_amount > 1:
             print(str(letter_amount) + " instances of " + single_letter + " found in " + chosen_word)
+        else: 
             if letter_amount == 1:
                 print(str(letter_amount) + " instance of " + single_letter + " found in " + chosen_word)
             else: 
-            print("No instances of " + single_letter + " found in " + chosen_word)
+                print("No instances of " + single_letter + " found in " + chosen_word)
