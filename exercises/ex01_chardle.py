@@ -29,6 +29,6 @@ else:
             print(single_letter + " found at index 4")
             letter_amount = letter_amount + 1
         if letter_amount >= 1:
-            print(letter_amount + " instances of " + single_letter + " found in " + chosen_word)
+            print(str(letter_amount) + " instances of " + single_letter + " found in " + chosen_word)
         else: 
             print("No instances of " + single_letter + " found in " + chosen_word)
