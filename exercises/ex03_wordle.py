@@ -18,7 +18,7 @@ def contains_char(word: str, char: str) -> bool:
     else:
         return False
 
-def emojified(guess: str, word: str) -> str:
+def  emojified(guess: str, word: str) -> str:
     """Stating string of emojis to code the secret word."""
     assert len(guess) == len(word)
     codified: str = ""
@@ -37,30 +37,29 @@ def emojified(guess: str, word: str) -> str:
         e = e + 1
     return codified
 
-def input_guess(chars: str) -> str:
+def  input_guess(chars: int) -> int:
     """Matching character length of guess and secret word."""
     guess: str = input(f"Enter a {chars} character word: ")
     while len(guess) != chars:
         guess = input(f"That wasn't {chars} chars! Try again: ")
     return guess 
 
-def main() -> None:
+def  main() -> None:
     """The entrypoint of the program and main game loop."""
     secret_word: str = "codes"
     turns: int = 1
     success: bool = False
-    game_guess: int = ""
+    game_guess: str = ""
     while (turns <= 6) and success is False: 
         print(f"=== Turn {turns}/6 ===")
         game_guess = (input_guess(len(secret_word)))
         print(emojified(game_guess, secret_word))
-        if  game_guess == secret_word: 
+        if game_guess == secret_word:
             success = True
             print(f"You won in {turns}/6 turns!")
         else:
             turns = turns + 1
     if turns > 6 and success is False:
         print("x/6 - Sorry, try again tomorrow!")
-
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+        main()
