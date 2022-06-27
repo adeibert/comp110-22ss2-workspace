@@ -8,12 +8,12 @@ def contains_char(word: str, char: str) -> bool:
     assert len(char) == 1
     i: int = 0
     present: bool = False
-    while (present == False) and i < len(word):
+    while present is False and i < len(word):
         if word[i] == char:
             present = True
         else:
             i = i + 1
-    if present == True:
+    if present is True:
         return True
     else:
         return False
@@ -30,14 +30,14 @@ def emojified(guess: str, word: str) -> str:
         if guess[e] == word[e]:
             codified = codified + green_box 
         else:
-            if contains_char(word, guess[e]) == True:
+            if contains_char(word, guess[e]) is True:
                 codified = codified + yellow_box
             else:
                 codified = codified + white_box
         e = e + 1
     return codified
 
-def input_guess(chars: int) -> int:
+def input_guess(chars: str) -> str:
     """Matching character length of guess and secret word."""
     guess: str = input(f"Enter a {chars} character word: ")
     while len(guess) != chars:
@@ -49,8 +49,8 @@ def main() -> None:
     secret_word: str = "codes"
     turns: int = 1
     success: bool = False
-    game_guess: str = ""
-    while (turns <= 6) and success == False: 
+    game_guess: int = ""
+    while (turns <= 6) and success is False: 
         print(f"=== Turn {turns}/6 ===")
         game_guess = (input_guess(len(secret_word)))
         print(emojified(game_guess, secret_word))
@@ -59,7 +59,7 @@ def main() -> None:
             print(f"You won in {turns}/6 turns!")
         else:
             turns = turns + 1
-    if turns > 6 and success == False:
+    if turns > 6 and success is False:
         print("x/6 - Sorry, try again tomorrow!")
 
 if __name__ == "__main__":
