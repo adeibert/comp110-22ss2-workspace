@@ -18,7 +18,7 @@ def contains_char(word: str, char: str) -> bool:
     else:
         return False
 
-def  emojified(guess: str, word: str) -> str:
+def emojified(guess: str, word: str) -> str:
     """Stating string of emojis to code the secret word."""
     assert len(guess) == len(word)
     codified: str = ""
