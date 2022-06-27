@@ -37,12 +37,14 @@ def emojified(guess: str, word: str) -> str:
         e = e + 1
     return codified
 
-def input_guess(chars: int) -> int:
+
+def input_guess(chars: int) -> str:
     """Matching character length of guess and secret word."""
     guess: str = input(f"Enter a {chars} character word: ")
     while len(guess) != chars:
         guess = input(f"That wasn't {chars} chars! Try again: ")
     return guess 
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
