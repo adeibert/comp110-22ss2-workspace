@@ -10,7 +10,6 @@ player: str
 def main() -> None:
     """Running the greet and giving path options."""
     global player
-    player = input("Hi! Welcome to 90s movie trivia! What is your name? ")
     greet()
     global points
     stay: bool = True
@@ -30,6 +29,8 @@ def main() -> None:
 
 def greet() -> None:
     """Welcome to the player."""
+    global player
+    player = input("Hi! Welcome to 90s movie trivia! What is your name? ")
     print(f"Welcome {player}!")
     print("Oh no! You were sucked into your TV and transported to Hollywood in the 90s! To get back home test how much you know about the 90s movie scene and be sure to ansewr in only lowercase letters!")
     print("Every wrong answer deducts 10 adventure points from your starting 100.")
