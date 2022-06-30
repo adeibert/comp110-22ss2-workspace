@@ -4,11 +4,13 @@ __author__ = "730460892"
 
 
 points: int = 100
-player: str = input("Hi! Welcome to 90s movie trivia! What is your name? ")
+player: str
 
 
 def main() -> None:
     """Running the greet and giving path options."""
+    global player
+    player = input("Hi! Welcome to 90s movie trivia! What is your name? ")
     greet()
     global points
     stay: bool = True
