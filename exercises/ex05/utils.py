@@ -21,6 +21,8 @@ def is_equal(x: list[int], y: list[int]) -> bool:
     """Evaluating if two lists are the same as eachother."""
     i: int = 0
     match: bool = True
+    if len(x) != len(y):
+        match = False
     while i < len(x) and match == True:
         if x[i] == y[i]:
             i += 1
