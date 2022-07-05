@@ -33,6 +33,12 @@ def is_equal(x: list[int], y: list[int]) -> bool:
 def sub(a_list: list[int], index: int, end_index: int):
     """Returning a certain set of values from a list between 2 specific indexes."""
     b_list: list[int] = []
+    if index < 0:
+        index = 0
+    if end_index > len(a_list):
+        end_index = (len(a_list))
+    if len(a_list) == 0 or len(a_list) < index or end_index <= 0:
+        return []
     b_list.append(a_list[index])
     index += 1
     while index < end_index: 
