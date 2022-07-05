@@ -5,7 +5,7 @@ __author__ = "730460892"
 
 def only_evens(list_1: list[int]) -> list[int]:
     """Returning only even values from an int list."""
-    list_1: list[int] = [1, 2, 3]
+    list_1: list[int]
     i: int = 0
     while i < len(list_1):
         num: int = list_1[i]
