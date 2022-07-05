@@ -13,7 +13,6 @@ def only_evens(list_1: list[int]) -> list[int]:
             i += 1
         else:
             list_1.pop(i)
-            i += 1
     return list_1
 
 
