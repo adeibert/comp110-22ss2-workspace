@@ -2,7 +2,9 @@
 
 __author__ = "730460892"
 
+
 def only_evens(list_1: list[int]) -> list[int]:
+    """Returning only even values from an int list."""
     list_1: list[int] = [1, 2, 3]
     i: int = 0
     while i < len(list_1):
@@ -10,12 +12,13 @@ def only_evens(list_1: list[int]) -> list[int]:
         if num % 2 == 0:
             i += 1
         else:
-            list_1.pop(num)
+            list_1.pop(i)
             i += 1
     print(list_1)
 
 
 def is_equal(x: list[int], y: list[int]) -> bool:
+    """Evaluating if two lists are the same as eachother."""
     i: int = 0
     match: bool = True
     while i < len(x) and match == True:
@@ -28,6 +31,7 @@ def is_equal(x: list[int], y: list[int]) -> bool:
 
 
 def sub(a_list: list[int], index: int, end_index: int):
+    """Returning a certain set of values from a list between 2 specific indexes."""
     a_list = a_list[index]
     index += 1
     while index <= end_index: 
