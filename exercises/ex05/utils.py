@@ -14,7 +14,7 @@ def only_evens(list_1: list[int]) -> list[int]:
         else:
             list_1.pop(i)
             i += 1
-    print(list_1)
+    return(list_1)
 
 
 def is_equal(x: list[int], y: list[int]) -> bool:
@@ -26,8 +26,7 @@ def is_equal(x: list[int], y: list[int]) -> bool:
             i += 1
         else:
             match = False
-            print(match)
-    print(True)
+    return(match)
 
 
 def sub(a_list: list[int], index: int, end_index: int):
@@ -37,4 +36,4 @@ def sub(a_list: list[int], index: int, end_index: int):
     while index <= end_index: 
         a_list = a_list + a_list[index]
         index += 1
-    print(a_list)
+    return(a_list)
