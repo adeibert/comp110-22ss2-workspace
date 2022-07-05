@@ -35,7 +35,7 @@ def sub(a_list: list[int], index: int, end_index: int):
     b_list: list[int] = []
     b_list.append(a_list[index])
     index += 1
-    while index <= end_index: 
+    while index < end_index: 
         b_list.append(a_list[index]) 
         index += 1
     return b_list
