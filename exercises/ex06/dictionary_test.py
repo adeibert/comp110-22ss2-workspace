@@ -9,8 +9,9 @@ import pytest
 
 with pytest.raises(KeyError):
     """Checking for Key Error while running invert function"""
-    my_dictionary = {"ava":"soph", "emi":"fresh", "bar":"jun"}
+    my_dictionary = {"ava": "soph", "emi": "fresh", "bar": "jun"}
     invert(my_dictionary)
+
 
 def test_empty_list() -> None:
     """Testing to see if an empty list would return an empty list."""
@@ -19,9 +20,9 @@ def test_empty_list() -> None:
 
 
 def test_if_given_list_returns_inverted() -> None:
-    """Testing if a simple list would return with keys and values inverted"""
-    my_dictionary = {"a":"s", "e":"f", "b":"j"}
-    assert invert(my_dictionary) == {"s":"a", "f":"e", "j":"b"}
+    """Testing if a simple list would return with keys and values inverted."""
+    my_dictionary = {"a": "s", "e": "f", "b": "j"}
+    assert invert(my_dictionary) == {"s": "a", "f": "e", "j": "b"}
 
 
 def test_for_empty_dictionary() -> None:
@@ -43,7 +44,7 @@ def test_if_returns_highest_value_in_dict() -> None:
 
 
 def test_amount_each_str_is_listed() -> None:
-    """Testing if a simple list would return with keys and values of the amount of times each string is in the list"""
+    """Testing if a simple list would return with keys and values of the amount of times each string is in the list."""
     values = ['a', 'b', 'c', 'a']
     assert count(values) == {'a': 2, 'b': 1, 'c': 1}
 
@@ -55,6 +56,6 @@ def test_if_given_empty_list() -> None:
 
 
 def test_3() -> None:
-    """Testing if a list of only one repeated string records how many times its listed"""
+    """Testing if a list of only one repeated string records how many times its listed."""
     values = ['a', 'a', 'a', 'a']
     assert count(values) == {'a': 4}

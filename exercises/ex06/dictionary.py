@@ -4,6 +4,7 @@ __author__ = "730460892"
 
 
 def invert(my_dictionary: dict[str, str]) -> dict[str, str]:
+    """Inverts Keys and Values of a dictionary."""
     my_inv_dictionary: dict[str, str] = {}
     for word in my_dictionary:
         for key in my_inv_dictionary:
@@ -13,8 +14,8 @@ def invert(my_dictionary: dict[str, str]) -> dict[str, str]:
     return my_inv_dictionary
 
 
-
 def favorite_color(favs: dict[str, str]) -> str:
+    """Prints value that occured the most in a dictionary."""
     tally_dict: dict[str, int] = {}
     highest_value: str = "nothing"
     for word in favs:
@@ -28,8 +29,9 @@ def favorite_color(favs: dict[str, str]) -> str:
         
 
 def count(values: list[str]) -> dict[str, int]:
+    """Counts the amount of times each value in a list is present."""
     counts: dict[str, int] = {}
-    times_present: int = 1
+    times_present: int = 0
     for value in values:
         if value in counts:
             times_present += 1
@@ -37,4 +39,3 @@ def count(values: list[str]) -> dict[str, int]:
         else:
             counts[value] = times_present
     return counts
-
