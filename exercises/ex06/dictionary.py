@@ -31,11 +31,10 @@ def favorite_color(favs: dict[str, str]) -> str:
 def count(values: list[str]) -> dict[str, int]:
     """Counts the amount of times each value in a list is present."""
     counts: dict[str, int] = {}
-    times_present: int = 0
+    times_present: int = 1
     for value in values:
         if value in counts:
-            times_present += 1
-            counts[value] = times_present
+            counts[value] = counts[value] + 1
         else:
             counts[value] = times_present
     return counts
