@@ -49,7 +49,7 @@ def input_guess(chars: int) -> str:
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-    secret_word: str = "codes"
+    secret_word: str = "canoe"
     turns: int = 1
     success: bool = False
     game_guess: str = ""
@@ -64,5 +64,6 @@ def main() -> None:
             turns = turns + 1
     if turns > 6 and success is False:
         print("x/6 - Sorry, try again tomorrow!")
-    if __name__ == "__main__":
-        main()
+
+if __name__ == "__main__":
+    main()
