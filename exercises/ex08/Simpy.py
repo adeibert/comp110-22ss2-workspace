@@ -17,7 +17,7 @@ class Simpy:
         self.values = values  
     
     def __str__(self) -> str:
-        """String representation of a Simpy."""
+        """Make a string representation of a Simpy."""
         return f"Simpy({self.values})"
 
     def fill(self, value: float, times: int) -> None:
@@ -86,7 +86,7 @@ class Simpy:
         return result
 
     def __eq__(self, rhs: Union[float, Simpy]) -> list[bool]:
-        """Produces a mask based on if each item matches a specific float or a float in another list."""
+        """Produce a mask based on if each item matches a specific float or a float in another list."""
         result: list[bool] = []
         if isinstance(rhs, float):
             for value in self.values:
@@ -103,7 +103,7 @@ class Simpy:
         return result
 
     def __gt__(self, rhs: Union[float, Simpy]) -> list[bool]:
-        """Produces a mask based on the greater than relationship between each item."""
+        """Produce a mask based on the greater than relationship between each item."""
         result: list[bool] = []
         if isinstance(rhs, float):
             for value in self.values:
@@ -120,7 +120,7 @@ class Simpy:
         return result
 
     def __getitem__(self, rhs: Union[int, list[bool]]) -> Union[float, Simpy]:
-        """Retrieves selected items from object."""
+        """Retrieve selected items from object."""
         if isinstance(rhs, int):
             i: int = 0
             for value in self.values:
@@ -132,7 +132,7 @@ class Simpy:
             result: Simpy = Simpy([])
             i: int = 0 
             for value in self.values:
-                if rhs[i] == True:
+                if rhs[i] is True:
                     result.values.append(value)
                 i += 1
             return result
